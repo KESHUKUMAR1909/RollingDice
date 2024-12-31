@@ -1,0 +1,105 @@
+body, html {
+    height: 90%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif/* Optional: For better font styling */
+}
+#play_area{
+    border-radius:10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 100px;
+    background-color: azure;
+    box-shadow: 0px 0px 50px yellow;
+}
+
+h1{
+    text-align: center;
+}
+#dice_roll_button{
+    display: flex;
+    justify-content: center;
+}
+
+.dice_area{
+    background-color: yellow;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(210, 210, 21);
+    border-radius: 10px;
+    box-shadow: -5px -6px 0px rgba(183, 189, 13, 0.641);
+}
+.showPieceDice{
+    background-color: yellow;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(210, 210, 21);
+    border-radius: 10px;
+    box-shadow: -5px -6px 0px rgba(183, 189, 13, 0.641);
+}
+.dot{
+    margin: 4px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 100%;
+    background-color: red;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.hidden{
+   visibility: hidden;
+}
+.animation{
+    
+    animation: rotateDice 1s ease;
+}
+button{
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    width: 60%;
+    height:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: rgba(250, 128, 114, 0.459);
+    border: 2px solid salmon;
+    border-radius: 5%;
+    box-shadow: 0px 0px 5px salmon;
+}
+@keyframes rotateDice {
+    0% {
+        transform:  rotateX(45deg) rotateY(0deg) scale(1);
+      }
+    40%{
+        transform: rotate(180deg) scale(1.2);
+    }
+    70%{
+        transform:  rotate(270deg) scale(1.5);
+    }
+    90%{
+        transform: rotate(180deg) scale(1.2); 
+    }
+      100% {
+        transform: rotateX(45deg) rotateY(360deg) scale(1);
+      }
+}
+
